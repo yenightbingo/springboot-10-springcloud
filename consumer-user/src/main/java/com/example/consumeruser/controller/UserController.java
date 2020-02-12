@@ -13,8 +13,9 @@ public class UserController {
     @GetMapping("/buy")
     public String butTicket(String name){
         String ticket = restTemplate.getForObject("http://PROVIDER-TICKET/ticket", String.class);
-
+        System.out.println("jjjjj");
         return name+"买了"+ticket;
+
     }
 
 
